@@ -12,8 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.16.0
-      - name: Test and coverage
-        run: npm install jest --coverage
+      - run: npm install
       - run: npm run build --if-present
       - run: npm run test
       - name: SonarCloud Scan
